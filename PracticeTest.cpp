@@ -119,6 +119,14 @@ TEST(PracticeTest, simple_sort_third_order) {
 	ASSERT_EQ(second, 58);
 	ASSERT_EQ(third, 7);
 }
+TEST(PracticeTest, simple_reverse_order) {
+    Practice obj;
+	int first = 100, second = 50, third = 10;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 100);
+	ASSERT_EQ(second, 50);
+	ASSERT_EQ(third, 10);
+}
 TEST(PracticeTest, no_sorting_needed) {
     Practice obj;
 	int first = 117, second = 58, third = 14;
@@ -126,6 +134,14 @@ TEST(PracticeTest, no_sorting_needed) {
     ASSERT_EQ(first, 117);
 	ASSERT_EQ(second, 58);
 	ASSERT_EQ(third, 14);
+}
+TEST(PracticeTest, mixed_sign_sort) {
+    Practice obj;
+	int first = -3, second = 122, third = -23;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 122);
+	ASSERT_EQ(second, -13);
+	ASSERT_EQ(third, -23);
 }
 
 // Non-standard cases
