@@ -13,6 +13,14 @@ class PracticeTest : public ::testing::Test {
 		virtual void TearDown(){} //clean up after each test, (before destructor)
 };
 
+/*
+	Palindrome tests
+	================
+	- Standard usage
+	- Symbolic characters
+	- Non-standard edge cases
+*/
+
 //STD tests
 TEST(PracticeTest, is_simple_palindrome) {
     Practice obj;
@@ -77,4 +85,31 @@ TEST(PracticeTest, is_bad_comp_palindrome) {
     Practice obj;
     bool actual = obj.isPalindrome("\0anna");
     ASSERT_TRUE(actual);
+}
+
+/*
+	Decsending Order tests
+	======================
+	- Standard usage
+	- Non-standard edge cases
+*/
+
+//STD tests
+TEST(PracticeTest, simple_sort) {
+    Practice obj;
+	int first = 7, second = 58, third = 45;
+    bool actual = obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 58);
+}
+TEST(PracticeTest, simple_large_sort) {
+    Practice obj;
+	int first = 7222217, second = 5111118, third = 3123245;
+    bool actual = obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 7222217);
+}
+TEST(PracticeTest, equal_sort) {
+    Practice obj;
+	int first = 0, second = 0, third = 0;
+    bool actual = obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 0);
 }
