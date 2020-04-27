@@ -90,8 +90,8 @@ TEST(PracticeTest, is_bad_comp_palindrome) {
 /*
 	Decsending Order tests
 	======================
-	- Standard usage
-	- Non-standard edge cases
+	- Standard usage (IE: Each type of order from sorting as well as no sorting)
+	- Non-standard edge cases (IE: Negatives, large numbers, etc.)
 */
 
 //STD tests
@@ -100,20 +100,26 @@ TEST(PracticeTest, simple_sort_first_order) {
 	int first = 5, second = 7, third = 4;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 7);
+	ASSERT_EQ(second, 5);
+	ASSERT_EQ(third, 4);
 }
 TEST(PracticeTest, simple_sort_second_order) {
     Practice obj;
 	int first = 7, second = 58, third = 45;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 58);
+	ASSERT_EQ(second, 45);
+	ASSERT_EQ(third, 7);
 }
 TEST(PracticeTest, simple_sort_third_order) {
     Practice obj;
 	int first = 7, second = 58, third = 145;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 145);
+	ASSERT_EQ(second, 58);
+	ASSERT_EQ(third, 7);
 }
-TEST(PracticeTest, no_sort) {
+TEST(PracticeTest, no_sorting_needed) {
     Practice obj;
 	int first = 117, second = 58, third = 14;
     obj.sortDescending(first, second, third);
@@ -128,16 +134,22 @@ TEST(PracticeTest, large_sort) {
 	int first = 7222217, second = 5111118, third = 3123245;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 7222217);
+	ASSERT_EQ(second, 5111118);
+	ASSERT_EQ(third, 3123245);
 }
 TEST(PracticeTest, equal_sort) {
     Practice obj;
 	int first = 0, second = 0, third = 0;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 0);
+	ASSERT_EQ(second, 0);
+	ASSERT_EQ(third, 0);
 }
 TEST(PracticeTest, negative_num_sort) {
     Practice obj;
 	int first = -3, second = -13, third = -23;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, -3);
+	ASSERT_EQ(second, -13);
+	ASSERT_EQ(third, -23);
 }
