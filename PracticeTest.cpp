@@ -95,13 +95,35 @@ TEST(PracticeTest, is_bad_comp_palindrome) {
 */
 
 //STD tests
-TEST(PracticeTest, simple_sort) {
+TEST(PracticeTest, simple_sort_first_order) {
+    Practice obj;
+	int first = 5, second = 7, third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 7);
+}
+TEST(PracticeTest, simple_sort_second_order) {
     Practice obj;
 	int first = 7, second = 58, third = 45;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 58);
 }
-TEST(PracticeTest, simple_large_sort) {
+TEST(PracticeTest, simple_sort_third_order) {
+    Practice obj;
+	int first = 7, second = 58, third = 145;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 145);
+}
+TEST(PracticeTest, no_sort) {
+    Practice obj;
+	int first = 117, second = 58, third = 14;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 117);
+	ASSERT_EQ(second, 58);
+	ASSERT_EQ(third, 14);
+}
+
+// Non-standard cases
+TEST(PracticeTest, large_sort) {
     Practice obj;
 	int first = 7222217, second = 5111118, third = 3123245;
     obj.sortDescending(first, second, third);
@@ -112,4 +134,10 @@ TEST(PracticeTest, equal_sort) {
 	int first = 0, second = 0, third = 0;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 0);
+}
+TEST(PracticeTest, negative_num_sort) {
+    Practice obj;
+	int first = -3, second = -13, third = -23;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, -3);
 }
