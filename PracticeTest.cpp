@@ -98,18 +98,18 @@ TEST(PracticeTest, is_bad_comp_palindrome) {
 TEST(PracticeTest, simple_sort) {
     Practice obj;
 	int first = 7, second = 58, third = 45;
-    bool actual = obj.sortDescending(first, second, third);
+    obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 58);
 }
 TEST(PracticeTest, simple_large_sort) {
     Practice obj;
 	int first = 7222217, second = 5111118, third = 3123245;
-    bool actual = obj.sortDescending(first, second, third);
+    obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 7222217);
 }
 TEST(PracticeTest, equal_sort) {
     Practice obj;
 	int first = 0, second = 0, third = 0;
-    bool actual = obj.sortDescending(first, second, third);
+    obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 0);
 }
