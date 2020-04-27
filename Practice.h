@@ -5,11 +5,10 @@
 
 using std::string;
 
-class Practice
-{
+class Practice {
 public:
-  void sortDescending(int & first, int & second, int & third);
-  bool isPalindrome(string input);
+	void sortDescending(int & first, int & second, int & third);
+	bool isPalindrome(string input);
 };
 
 #endif
