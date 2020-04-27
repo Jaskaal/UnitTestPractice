@@ -140,7 +140,7 @@ TEST(PracticeTest, mixed_sign_sort) {
 	int first = -3, second = 122, third = -23;
     obj.sortDescending(first, second, third);
     ASSERT_EQ(first, 122);
-	ASSERT_EQ(second, -13);
+	ASSERT_EQ(second, -3);
 	ASSERT_EQ(third, -23);
 }
 
