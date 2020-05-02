@@ -169,3 +169,11 @@ TEST(PracticeTest, negative_num_sort) {
     ASSERT_EQ(second, -13);
     ASSERT_EQ(third, -23);
 }
+TEST(PracticeTest, negativeEQ_sort) {
+    Practice obj;
+    int first = -3, second = -3, third = -3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, -3);
+    ASSERT_EQ(second, -3);
+    ASSERT_EQ(third, -3);
+}
